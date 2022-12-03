@@ -127,12 +127,11 @@ img {
 .modal-btn {
     width: 30px;
     height: 30px;
-    border: 50%;
     background-color: #ffffff;
     border-radius: 50%;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    margin: 8px 8px 543px 490px;
 }
 
 
@@ -350,7 +349,7 @@ img {
 .features-block {
     display: flex;
     width: 270px;
-    height: 120;
+    height: 120px;
     justify-content: center;
     border-radius: 4px;
     background-color: var(--fon-teamm);
