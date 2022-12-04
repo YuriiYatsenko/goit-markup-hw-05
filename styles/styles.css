@@ -24,6 +24,8 @@ html {
     --border-portfolio: #EEEEEE;
     --background-hero: #C4C4C4;
     --border-klient-color: #AFB1B8;
+    --work-img-title-color: rgba(47, 48, 58, 80%);
+    --portfolio-animation: rgba(33, 150, 243, 90%);
 }
 
 body {
@@ -100,7 +102,7 @@ img {
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-.backdrop .is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
 }
@@ -393,6 +395,37 @@ img {
 }
 
 
+
+.work-img-title {
+    display: flex;
+    color: var(--title-primary-fon);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-list {
+    position: relative;
+    display: block;
+}
+
+
+.work-title-box {
+    position: absolute;
+    display: flex;
+    top: 76%;
+    right: 0%;
+    width: 370px;
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--work-img-title-color);
+}
+
+
 .section-teamtitle {
     font-weight: 700;
     font-size: 36px;
@@ -634,6 +667,8 @@ footer {
 }
 
 /*      PORTFOLIO      */
+
+
 header {
     border-bottom: 1px solid var(--header-portfolio);
 }
@@ -706,6 +741,7 @@ header {
     margin-right: 0;
 }
 
+
 .img-text {
     padding: 24px;
     border: 1px solid var(--border-portfolio);
@@ -735,4 +771,33 @@ header {
 
 a {
     text-decoration: none;
+}
+
+.portfolio-relative {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    background-color: var(--portfolio-animation);
+
+    transform: translatey(100%);
+    transition: transform 250ms ease;
+}
+
+.portfolio-absolute > h3 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height:1.5;
+    color: var(--title-primary-fon);
+    margin: 63px 24px;
+}
+
+.portfolio-elements:hover .portfolio-absolute {
+    transform: translatex(0);
 }
