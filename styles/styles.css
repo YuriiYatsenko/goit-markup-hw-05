@@ -107,11 +107,14 @@ img {
     pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+    transform: translate(-50%,-50%) scale(0.9);
+}
+
 .modal {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
 
     width: 528px;
     height: 581px;
@@ -119,6 +122,9 @@ img {
     border-radius: 4px;
     background-color: var(--title-primary-fon);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    transform: translate(-50%, -50%) scale (0.9);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icons {
@@ -194,6 +200,10 @@ img {
     justify-content: center;
     display: flex;
     align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-contacts .item-contacts:not(:last-child) {
@@ -228,6 +238,10 @@ img {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.current {
@@ -258,6 +272,10 @@ img {
     border-radius: 2px;
     align-items: center;
     justify-content: center;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-two {
@@ -268,6 +286,10 @@ img {
     border-radius: 2px;
     align-items: center;
     justify-content: center;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-one:hover,
@@ -329,6 +351,10 @@ img {
     text-align: center;
     padding: 10px 32px;
     border: none;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* section */
@@ -405,6 +431,7 @@ img {
     text-align: center;
     justify-content: center;
     align-items: center;
+    text-transform: uppercase;
 }
 
 .work-list {
@@ -491,11 +518,13 @@ img {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-soc-items:not(:last-child) {
-    margin-right: 10px;
-}
+
 
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -511,6 +540,10 @@ img {
 
 .team-soc-icons {
     fill: var(--border-klient-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icons:hover,
@@ -541,6 +574,10 @@ img {
     height: 92px;
     border: 1px solid var(--border-klient-color);
     border-radius: 4px;
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .klient-link {
@@ -551,6 +588,10 @@ img {
     align-items: center;
     padding: 16px 32px;
     fill: var(--border-klient-color);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .klient-link:hover,
@@ -601,11 +642,6 @@ footer {
     line-height: 1.7;
 }
 
-.contacts .contacts:hover,
-.contacts .contacts:focus {
-    color: var(--accent-color);
-}
-
 .foooter-logo {
     text-decoration: none;
     font-family: 'Raleway', sans-serif;
@@ -629,6 +665,7 @@ footer {
     font-size: 14px;
     line-height: 1.2;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .footer-soc-list {
@@ -655,6 +692,10 @@ footer {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-link:hover,
@@ -691,6 +732,10 @@ header {
     border-radius: 4px;
     border-color: var(--border-color);
     padding: 6px 22px;
+
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-portfolio {
@@ -726,6 +771,10 @@ header {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-elements:hover,
@@ -790,14 +839,14 @@ a {
     transition: transform 250ms ease;
 }
 
-.portfolio-absolute > h3 {
+.portfolio-absolute>h3 {
     font-weight: 400;
     font-size: 18px;
-    line-height:1.5;
+    line-height: 1.5;
     color: var(--title-primary-fon);
     margin: 63px 24px;
 }
 
+
 .portfolio-elements:hover .portfolio-absolute {
     transform: translatex(0);
-}
