@@ -521,17 +521,11 @@ img {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    color: var(--border-klient-color);
 
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-
-.team-soc-link:hover,
-.team-soc-link:focus {
-    background-color: var(--accent-color);
 }
 
 .team-card {
@@ -541,18 +535,17 @@ img {
     border-radius: 4px;
 }
 
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+
 .team-soc-icons {
-    fill: var(--border-klient-color);
-
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    fill: currentColor ;
 }
 
-.team-soc-icons:hover,
-.team-soc-icons:focus {
-    fill: var(--title-primary-fon);
-}
 
 .klient-title {
     font-weight: 700;
